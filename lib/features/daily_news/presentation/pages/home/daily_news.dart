@@ -1,3 +1,4 @@
+import 'package:clean_architecture_practice/features/daily_news/presentation/widget/article_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -27,8 +28,8 @@ class DailyNews extends StatelessWidget {
             return ListView.builder(
               itemCount: state.articles!.length,
               itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text(' $index'),
+                return ArticleWidget(
+                  article: state.articles![index],
                 );
               },
             );
