@@ -4,9 +4,9 @@ import 'package:clean_architecture_practice/features/daily_news/presentation/blo
 import 'package:clean_architecture_practice/features/daily_news/presentation/bloc/article/remote/remote_article_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class RemoteArticlesBloc extends Bloc<RemoteArticleEvent, RemoteArticleState> {
+class RemoteArticleBloc extends Bloc<RemoteArticleEvent, RemoteArticleState> {
   final GetArticleUseCase _getArticleUseCase;
-  RemoteArticlesBloc(this._getArticleUseCase)
+  RemoteArticleBloc(this._getArticleUseCase)
       : super(const RemoteArticlesLoading()) {
     on<GetArticleEvent>(onGetArticleEvent);
   }
