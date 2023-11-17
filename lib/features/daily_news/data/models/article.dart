@@ -2,7 +2,7 @@ import 'package:clean_architecture_practice/features/daily_news/domain/entities/
 
 class ArticleModel extends ArticleEntity {
   const ArticleModel(
-      {required int id,
+      {int? id,
       required String author,
       required String title,
       required String description,
@@ -21,7 +21,6 @@ class ArticleModel extends ArticleEntity {
             content: content);
   factory ArticleModel.fromJson(Map<String, dynamic> json) {
     return ArticleModel(
-      id: json['id'] ?? "",
       author: json['author'] ?? "",
       title: json['title'] ?? "",
       description: json['description'] ?? "",

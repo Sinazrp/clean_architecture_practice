@@ -25,6 +25,7 @@ class DailyNews extends StatelessWidget {
           }
           if (state is RemoteArticlesDone) {
             return ListView.builder(
+              itemCount: state.articles!.length,
               itemBuilder: (context, index) {
                 return ListTile(
                   title: Text(' $index'),
